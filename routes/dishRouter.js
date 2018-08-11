@@ -150,7 +150,7 @@ dishRouter.route('/:dishId/comments')
         else
         {
             err = new Error('Dish ' + req.params.dishId + ' Not Found');
-            err.statusCode = 404;
+            err.status = 404;
             return next(err);
         }
     }
@@ -176,7 +176,7 @@ dishRouter.route('/:dishId/comments/:commentId')
                 err = new Error('Dish ' + req.params.dishId + ' Not Found');
             else
                 err = new Error('Comment ' + req.params.commentId + ' Not Found');
-            err.statusCode = 404;
+            err.status = 404;
             return next(err);
         }
     }, (err) => next(err))
@@ -222,7 +222,7 @@ dishRouter.route('/:dishId/comments/:commentId')
                 err = new Error('Dish ' + req.params.dishId + ' Not Found');
             else
                 err = new Error('Comment ' + req.params.commentId + ' Not Found');
-            err.statusCode = 404;
+            err.status = 404;
             return next(err);
         }
     }, (err) => next(err))
@@ -256,7 +256,7 @@ dishRouter.route('/:dishId/comments/:commentId')
                 err = new Error('Dish ' + req.params.dishId + ' Not Found');
             else
                 err = new Error('Comment ' + req.params.commentId + ' Not Found');
-            err.statusCode = 404;
+            err.status = 404;
             return next(err);
         }
     }
